@@ -14,7 +14,6 @@ Technologies:
 - React Native
 - React
 - Redux
-- NativeWind
 - JSON
 - Git
 Developed by Salim Mghari 
