@@ -15,13 +15,16 @@ interface LayoutProps {
 
 const Layout = (props: LayoutProps): JSX.Element => {
     return (
-        <SafeAreaView style={styles.container}>
+        <SafeAreaView className="grow">
             <StatusBar 
                 backgroundColor="#FFFFFF"
                 barStyle="dark-content"
                 animated={true}
             />
-            <ScrollView style={styles.subContainer}>
+            <ScrollView 
+              className="grow p-10"
+              style={styles.container}
+            >
                 {props.children}
             </ScrollView>
         </SafeAreaView>
@@ -30,12 +33,7 @@ const Layout = (props: LayoutProps): JSX.Element => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-  },
-  subContainer: {
-    flex: 1,
-    backgroundColor: '#FFFFFF',
-    padding: 30
+    backgroundColor: '#FFFFFF'
   }
 });
 

@@ -20,11 +20,15 @@ interface FieldProps {
 
 const Field = (props: FieldProps): JSX.Element => {
     return (
-        <View style={styles.container}>
-            <Text style={styles.label}>
+        <View className="justify-start items-center">
+            <Text 
+                className="w-full mb-3"
+                style={styles.label}
+            >
                 {props.label}
             </Text>
             <TextInput 
+                className="w-full mb-6 px-6 py-3 rounded-md shadow-lg"
                 style={[styles.input, {height: props.multiLine ? 200 : 'auto'}]}
                 defaultValue={props.value}
                 placeholder={props.placeholder}
@@ -37,34 +41,15 @@ const Field = (props: FieldProps): JSX.Element => {
 }
 
 const styles = StyleSheet.create({
-    container: {
-        justifyContent: 'flex-start',
-        alignItems: 'center'
-    },
     label: {
-        width: '100%',
-        marginBottom: 10,
         color: '#363636'
     },
     input: {
-        width: '100%',
-        marginBottom: 20,
-        paddingHorizontal: 20,
-        paddingVertical: 10,
         backgroundColor: '#FFFFFF',
         color: '#363636',
-        borderRadius: 6,
         borderColor: '#363636',
         borderWidth: 1,
-        borderStyle: 'solid',    
-        shadowColor: 'rgba(149, 157, 165, 0.2)',
-        shadowOffset: {
-          width: 0,
-          height: 8,
-        },
-        shadowRadius: 24,
-        shadowOpacity: 1,
-        elevation: 4    
+        borderStyle: 'solid'
     }
 });
 

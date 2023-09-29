@@ -1,6 +1,6 @@
 # Project Flask & React Native
 
-Mobile software
+Web, desktop, and mobile software
 
 Technologies:
 - Python
@@ -27,6 +27,11 @@ Developed by Salim Mghari
 
 > - `cd frontend/`
 > - `npm install && npm start`
+> - `npm run web`
+> - `npm run windows`
+> - `npm run macos`
+> - `npm run android`
+> - `npm run ios`
 
 ---
 

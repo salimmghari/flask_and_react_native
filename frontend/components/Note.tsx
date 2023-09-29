@@ -30,7 +30,10 @@ interface NoteProps {
 
 const Note = (props: NoteProps): JSX.Element => {
     return (
-        <View style={styles.container}>
+        <View 
+            className="w-full mb-8 p-10 rounded-md shadow-lg"
+            style={styles.container}
+        >
             <Field 
                 label="Title:"
                 value={props.title}
@@ -77,22 +80,10 @@ const Note = (props: NoteProps): JSX.Element => {
 
 const styles = StyleSheet.create({
     container: {
-        width: '100%',
-        marginBottom: 30,
-        padding: 30,
         backgroundColor: '#FFFFFF',
-        borderRadius: 6,
         borderColor: '#363636',
         borderWidth: 1,
-        borderStyle: 'solid',    
-        shadowColor: 'rgba(149, 157, 165, 0.2)',
-        shadowOffset: {
-          width: 0,
-          height: 8,
-        },
-        shadowRadius: 24,
-        shadowOpacity: 1,
-        elevation: 4    
+        borderStyle: 'solid'
     }
 });
 

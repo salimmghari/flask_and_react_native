@@ -17,11 +17,14 @@ interface LinkProps {
 const Link = (props: LinkProps): JSX.Element => {
     return (
         <Pressable 
-            style={styles.container}
+            className="grow"
             onPress={props.onPress}
         >
-            <View style={styles.link}>
-                <Text style={styles.linkText}>
+            <View className="w-full mb-6">
+                <Text 
+                    className="text-sm text-center"
+                    style={styles.text}
+                >
                     {props.children}
                 </Text>
             </View>
@@ -30,17 +33,8 @@ const Link = (props: LinkProps): JSX.Element => {
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1
-    },
-    link: {
-        width: '100%',
-        marginBottom: 20
-    },
-    linkText: {
-        color: '#3A73EF',
-        fontSize: 12,
-        textAlign: 'center'
+    text: {
+        color: '#3A73EF'
     }
 });
 
