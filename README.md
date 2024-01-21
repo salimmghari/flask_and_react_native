@@ -16,6 +16,7 @@ Technologies:
 - Redux
 - JSON
 - Git
+
 Developed by Salim Mghari 
 
 ---
