@@ -51,7 +51,6 @@ class SignupView(Resource):
 
 class LoginView(Resource):
     def post(self):
-        pass
         username = request.json.get('username')
         password = request.json.get('password')
         user = None
