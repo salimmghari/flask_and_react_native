@@ -18,10 +18,8 @@ from werkzeug.security import (
 )
 from app.jwt import jwt
 from app.db import db
-from api.users.models import User
+from api.users.models import User, BlackListedToken
 
-
-BLACKLISTED_TOKENS = []
 
 user_post_args = reqparse.RequestParser()
 user_post_args.add_argument('username', type=str, required=True)
@@ -77,7 +75,9 @@ class LogoutView(Resource):
     @jwt_required()
     def post(self):
         jti = get_jwt()['jti']
-        BLACKLISTED_TOKENS.append(jti)
+        blacklisted_token = BlackListedToken(token=jti)
+        db.session.add(blacklisted_token)
+        db.session.commit()
         return Response(
             response=json.dumps({
                 'message': 'Logged out.'
@@ -90,4 +90,4 @@ class LogoutView(Resource):
 @jwt.token_in_blocklist_loader
 def check_if_token_in_blacklist(header, token):
     jti = token['jti']
-    return jti in BLACKLISTED_TOKENS
+    return BlackListedToken.query.filter_by(token=jti).first() is not None

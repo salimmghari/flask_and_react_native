@@ -9,7 +9,7 @@ class User(db.Model):
     created_at = db.Column(db.DateTime(), nullable=False, default=datetime.now())
 
 
-class Token(db.Model):
+class BlackListedToken(db.Model):
     id = db.Column(db.Integer(), unique=True, nullable=False, primary_key=True)
-    blacklisted_token = db.Column(db.String(250), unique=True)
+    token = db.Column(db.String(250), unique=True)
     created_at = db.Column(db.DateTime(), nullable=False, default=datetime.now())
