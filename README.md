@@ -5,15 +5,17 @@ Web, desktop, and mobile software
 Technologies:
 - Python
 - Flask
-- Flask SQLAlchemy
 - Flask RESTful
+- Flask SQLAlchemy
+- Flask JWT Extended
 - SQL
-- SQLite
+- PostgreSQL
 - JavaScript
 - TypeScript
 - React Native
-- React
-- Redux
+- ReactJS
+- ReduxJS
+- NativeWind
 - JSON
 - Git
 
@@ -21,11 +23,15 @@ Developed by Salim Mghari
 
 ---
 
-## Launch:
+### Launch:
+
+#### Backend:
 
 > - `cd backend/`
 > - `pip install -r requirements.txt`
 > - `python main.py`
+
+#### Frontend:
 
 > - `cd frontend/`
 > - `npm install`
@@ -41,7 +47,7 @@ Developed by Salim Mghari
 
 Proprietary License
 
-Salim Mghari 2024
+Salim Mghari 2026
 
 ---
 

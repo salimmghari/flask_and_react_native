@@ -6,7 +6,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 DEBUG = bool(os.environ.get('DEBUG'))
 
-SQLALCHEMY_DATABASE_URI = f'sqlite:///' + os.path.join(os.path.abspath(os.path.dirname(__file__)), 'db.sqlite3')
+SQLALCHEMY_DATABASE_URI = f'postgresql://postgres:{os.environ.get("DATABASE_PASSWORD")}@localhost:5432/notes'
 
 SQLALCHEMY_TRACK_MODIFICATIONS = False
 
