@@ -1,6 +1,6 @@
 # Project Flask & React Native
 
-Web, desktop, and mobile software
+Web, desktop, and mobile application
 
 Technologies:
 - Python
